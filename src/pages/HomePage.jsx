@@ -1,5 +1,6 @@
 import React from "react";
 import FeatureCard from "../components/FeatureCard";
+import Counter from "../components/Counter";
 
 const HomePage = () => {
   const features = [
@@ -16,15 +17,15 @@ const HomePage = () => {
       description: "저에게 연락하는 방법입니다.",
     },
     {
-      title: "여러분이 원하는",
-      description: "항목을 새로 만들어 보세요.",
+      title: "계산기",
+      description: "계산기 서비스입니다.",
     },
   ];
 
   return (
     <div className="home-container">
       <h2>환영합니다!</h2>
-      <p>이 웹사이트는 React를 사용하여 만든 개인 포트폴리오입니다.</p>
+      <p>이 웹사이트는 React를 사용하여 만든 도현의 포트폴리오입니다.</p>
       <div className="features">
         {features.map((feature, index) => (
           <FeatureCard
@@ -34,6 +35,7 @@ const HomePage = () => {
           />
         ))}
       </div>
+      <Counter/>
     </div>
   );
 };

@@ -4,13 +4,19 @@ import React from "react";
  * 프로젝트 카드 컴포넌트
  * @param {string} title - 프로젝트의 제목
  * @param {string} description - 프로젝트의 설명
+ * @param {string} stack - 프로젝트 사용 기술
  * @param {string} image - 프로젝트의 이미지 URL (선택적)
  * @param {string} link - 프로젝트의 외부 링크 URL (선택적)
  */
-const ProjectCard = ({ title, description, image, link }) => {
+const ProjectCard = ({ title, description, stack, image, link }) => {
   return (
     <div className="project-card">
       <h3>{title}</h3>
+      {stack && (
+        <div className="project-stack">
+          {stack}
+        </div>
+      )}
       {/* 프로젝트 이미지가 있는 경우 표시 */}
       {image && (
         <div className="project-image">

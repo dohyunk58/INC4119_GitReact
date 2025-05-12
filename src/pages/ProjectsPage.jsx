@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import sampleImage from "../assets/calcu.png";
+import memeklyImage from "../assets/memekly.png";
 
 /**
  * 프로젝트 페이지 컴포넌트
@@ -9,18 +10,23 @@ import sampleImage from "../assets/calcu.png";
 const ProjectsPage = () => {
   const projects = [
     {
-      title: "나의 프로젝트1",
+      title: "계산기 서비스",
+      stack: "React HTML CSS JSX",
       description: "React를 사용하여 만든 계산기 애플리케이션",
       image: sampleImage,
     },
     {
-      title: "나의 프로젝트2",
-      description: "캡스톤 프로젝트에서의 딥러닝 기반 영상 분류 시스템",
+      title: "해물해물 - 해상물류 법률 챗봇 서비스",
+      stack: "Flask Streamlit Ollama3",
+      description: "해상물류 법률 챗봇 서비스",
+      link: "https://github.com/dohyunk58/haemulhaemul",
     },
     {
-      title: "나의 프로젝트3",
-      description: "나만의 맛집 저장리스트 ~~",
-      link: "https://map.naver.com/p/entry/place/18697937?c=15.00,0,0,0,dh",
+      title: "Memekly - 밈 랭킹 서비스",
+      stack: "Java Spring MongoDB",
+      description: "Farmsystem 4기 활동, 밈 랭킹 서비스",
+      image: memeklyImage,
+      link: "https://github.com/DguFarmSystem/4th-security-S4-BE",
     },
   ];
 
@@ -32,6 +38,7 @@ const ProjectsPage = () => {
           <ProjectCard
             key={index}
             title={project.title}
+            stack={project.stack}
             description={project.description}
             image={project.image}
             link={project.link}

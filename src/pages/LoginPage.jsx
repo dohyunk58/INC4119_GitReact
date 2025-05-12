@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Welcome from "../components/Welcome"
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -16,6 +17,7 @@ const LoginPage = ({ onLogin }) => {
 
   return (
     <div className="login-container">
+      <Welcome name = "2020111002 김도현"/>
       <h2>로그인</h2>
       <form onSubmit={handleSubmit}>
         <div>

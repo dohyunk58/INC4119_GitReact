@@ -7,6 +7,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import CalculatorPage from "./pages/CalculatorPage"
 
 const App = () => {
   // 로그인 상태를 관리하는 state
@@ -34,6 +35,8 @@ const App = () => {
         return <ProjectsPage />;
       case "contact":
         return <ContactPage />;
+      case "calculator":
+        return <CalculatorPage />;
       default:
         return <HomePage />;
     }

@@ -1,0 +1,46 @@
+.calculator {
+    width: 300px;
+    margin: 20px auto; /* 화면 중앙에 배치 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* 내용이 넘치면 숨김 */
+}
+
+/* Buttons 컴포넌트 스타일 */ 
+.calculator > div:last-child > div { /* Buttons 컴포넌트의 각 행 스타일 */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4개의 열 */
+}
+  
+.calculator > div:last-child button { /* 버튼 개별 스타일 */
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+  
+.calculator > div:last-child button:hover {
+    background-color: #ddd;
+}
+
+/* Display */
+.calculator > div:first-child {
+    background-color: #f0f0f0;
+    padding: 5px;
+    text-align: right;
+}
+
+.display-input {
+    font-size: 18px;
+    color: #333; /* 짙은 회색 */
+    text-align: right; /* 필요에 따라 텍스트 정렬 설정 */
+    padding-right: 5px; /* 필요에 따라 패딩 추가 */
+}
+  
+.display-result {
+    font-size: 24px;
+    color: #000; /* 검정 */
+    text-align: right; /* 필요에 따라 텍스트 정렬 설정 */
+    padding: 5px; /* 필요에 따라 패딩 추가 */
+}
